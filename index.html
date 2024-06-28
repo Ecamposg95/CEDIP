@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Vacaciones</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+</head>
+<body>
+    <div class="header">
+        <h1>VACACIONES VERANO 2024</h1>
+        <h2>CEDIP - Cámara de Diputados</h2>
+    </div>
+    <div class="form-container">
+        <form id="vacationForm">
+            <div class="form-group">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="role">Cargo:</label>
+                <select id="role" name="role" required>
+                    <option value="">Elegir</option>
+                    <option value="Dirección General">Dirección General</option>
+                    <option value="Director Estudios de Constitucionalidad">Director Estudios de Constitucionalidad</option>
+                    <option value="Investigador 'A'">Investigador 'A'</option>
+                    <option value="Investigadora 'C'">Investigadora 'C'</option>
+                    <option value="Investigadora 'B'">Investigadora 'B'</option>
+                    <option value="Titular de la Academia de Gobierno y Derecho Parlamentario">Titular de la Academia de Gobierno y Derecho Parlamentario</option>
+                    <option value="Administrativo Especializado">Administrativo Especializado</option>
+                    <option value="Secretaria">Secretaria</option>
+                    <option value="Administrativo">Administrativo</option>
+                    <option value="Coordinadora Técnica">Coordinadora Técnica</option>
+                    <option value="Directora de Estudios Legislativos">Directora de Estudios Legislativos</option>
+                    <option value="Director De Estudios Parlamentarios">Director De Estudios Parlamentarios</option>
+                    <option value="Dirección de Estudios Jurídicos">Dirección de Estudios Jurídicos</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="employmentRelation">Relación Laboral:</label>
+                <select id="employmentRelation" name="employmentRelation" required>
+                    <option value="">Elegir</option>
+                    <option value="Homólogo">Homólogo</option>
+                    <option value="Mando">Mando</option>
+                    <option value="Confianza">Confianza</option>
+                    <option value="Base Sindicalizada">Base Sindicalizada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Tipo de Vacaciones:</label>
+                <label><input type="radio" name="vacationType" value="interval" required> Intervalo de fechas</label>
+                <label><input type="radio" name="vacationType" value="specific" required> Días específicos</label>
+            </div>
+            <div id="intervalDates" class="form-group" style="display:none;">
+                <label for="intervalDateRange">Fechas:</label>
+                <input type="text" id="intervalDateRange" name="intervalDateRange">
+            </div>
+            <div id="specificDates" class="form-group" style="display:none;">
+                <label for="specificDays">Selecciona los días:</label>
+                <input type="text" id="specificDays" name="specificDays">
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-ui-multidatespicker/jquery-ui.multidatespicker.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
